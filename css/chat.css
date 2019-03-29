@@ -1,0 +1,42 @@
+#chat-container > #bai-chat-widget > .bai-chat-header > h2 {
+  font-family: Raleway;
+  color: #27304d;
+}
+
+#bai-chat-widget
+  > .bai-chat-body
+  > .bai-msg-window
+  > ul
+  > li
+  > div.bai-chat-bubble.bot {
+  font-family: Raleway;
+  background: #f2f1ed;
+  color: #27304d;
+}
+
+#bai-chat-widget
+  > .bai-chat-body
+  > .bai-msg-window
+  > ul
+  > li
+  > div.bai-chat-bubble.client {
+  font-family: Raleway;
+  background: #9eb5cb;
+  color: #ffffff;
+}
+
+/* #chat-container > #bai-chat-widget > .bai-chat-body > .bai-text-wrap {
+  height: 62px;
+  border-top: 3px solid #f0f0f0;
+} */
+
+#chat-container > #bai-chat-widget > .bai-chat-body > .bai-text-wrap > svg {
+  background: url("../img/blue-arrow.svg");
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+#chat-container > #bai-chat-widget > .bai-chat-body > .bai-text-wrap > svg > * {
+  visibility: hidden;
+}

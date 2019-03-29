@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SAGA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/site.css">
+
+    <script src="js/vue.min.js"></script>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <div v-cloak id="main">
+        <header>
+            <div class="container">
+                <div class="row" style="padding: 1rem 0;">
+                    <div class="twelve columns">
+                        <button class="home-button" v-on:click="goHome">
+                            <img class ="home-button" src="img/saga_logo.png" alt="">
+                        </button>
+                        <button class="about-button" v-on:click="goAbout">
+                            <h5 v-bind:class="{'about-button-unactive': !activeAbout, 'about-button-active': activeAbout}">
+                                OM SAGA
+                            </h5>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="twelve columns">
+                        <img class="main-img" v-bind:src="img" alt="">
+                    </div>
+                </div>
+             
+                <div class="row">
+                    <div class="twelve columns" style="text-align: center">
+                        <h1 class="info-text-title hidden">
+                            {{ title }}
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="twelve columns" style="text-align: center">
+                        <span class="info-text-content hidden h-3" v-html="content">
+                            {{ content }}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="twelve columns" style="text-align: center">
+<!--                         <button class="chat-button-middle" v-on:click="openChat">
+                            <span class="h-3">
+                                Still spørsmål
+                            </span>
+                        </button> -->
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <!--
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="twelve column footer-column">
+                        <button class="chat-button-bottom-corner" v-on:click="openChat">
+                            <span class="h-4">
+                                Hei, hva lurer du på?
+                            </span>
+                            <img class="blue-arrow-img" src="img/blue-arrow.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </footer>
+        -->
+    </div>
+
+    <script src="https://partner4.boost.ai/chatPanel/chatPanel.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
